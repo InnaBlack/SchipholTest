@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Flight;
 use Illuminate\Http\Request;
+use App\Http\Requests\SchipholRequest;
 
 class FlightController extends Controller
 {
@@ -14,7 +15,7 @@ class FlightController extends Controller
      */
     public function index()
     {
-        //
+       echo('return');
     }
 
     /**

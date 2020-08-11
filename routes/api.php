@@ -23,7 +23,7 @@ Route::apiResource('/data_update', 'DataBaseUpdateController');
 
 Route::apiResource('/flights', 'FlightController');
 Route::apiResource('/airports', 'AirportController');
-Route::apiResource('/airports/={id}', 'AirportController', ['airports' => 'id']);
+//Route::apiResource('/airports/={id}', 'AirportController', ['airports' => 'id']);
 Route::apiResource('/airlines', 'AirlineController');
 
 
