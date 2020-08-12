@@ -12,8 +12,7 @@ class AirlineController extends Controller
      */
     public function index()
     {
-        $items = Airline::all();
-        return dd($items->toJson(JSON_PRETTY_PRINT));
+        return Airline::all();
     }
 
     /**
