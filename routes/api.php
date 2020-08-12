@@ -32,13 +32,13 @@ Route::apiResource('/airlines', 'AirlineController');
 
 
 Route::resource('/flights', 'FlightController')->only([
-    'index', 'show', 'store', 'update', 'destroy'
+    'index',
 ]);
 
 Route::resource('/airports', 'AirportController')->only([
-    'index', 'show', 'store', 'update', 'destroy'
+    'index',
 ]);
 
 Route::resource('/airlines', 'AirlineController')->only([
-    'index', 'show', 'store', 'update', 'destroy'
+    'index',
 ]);
