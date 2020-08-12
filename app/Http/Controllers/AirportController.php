@@ -14,4 +14,17 @@ class AirportController extends Controller
     {
         return Airport::all();
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  string  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show(string $id = '')
+    {
+        if (!empty($id)) {
+            return Airport::where('id', $id)->first();
+        }
+    }
 }

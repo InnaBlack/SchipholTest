@@ -12,19 +12,7 @@ class AirlineController extends Controller
      */
     public function index()
     {
-        return Airline::all();
+        return Airline::all()->sortBy();
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  string  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show(string $id = '')
-    {
-        if (!empty($id)) {
-            return Airline::where('id', $id)->first();
-        }
-    }
 }
