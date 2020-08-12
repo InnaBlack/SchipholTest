@@ -27,7 +27,11 @@ Route::apiResource('/dataupdate', 'DataBaseUpdateController');
 
 Route::apiResource('/flights', 'FlightController');
 Route::apiResource('/airports', 'AirportController');
-//Route::apiResource('/airports/={id}', 'AirportController', ['airports' => 'id']);
+
+Route::get('/airports/{id}',  'AirportController@show' , ['id'], function ($id) {
+    return $id;
+});
+
 Route::apiResource('/airlines', 'AirlineController');
 
 

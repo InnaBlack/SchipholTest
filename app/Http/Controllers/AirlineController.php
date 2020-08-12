@@ -14,4 +14,17 @@ class AirlineController extends Controller
     {
         return Airline::all();
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  string  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show(string $id = '')
+    {
+        if (!empty($id)) {
+            return Airline::where('id', $id)->first();
+        }
+    }
 }
