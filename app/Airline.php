@@ -33,4 +33,6 @@ class Airline extends Model
 
     protected $table = 'airlines';
 
+    public $incrementing = false;
+
 }

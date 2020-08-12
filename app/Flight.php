@@ -32,4 +32,6 @@ class Flight extends Model
         ];
 
     protected $table = 'flights';
+
+    public $incrementing = false;
 }

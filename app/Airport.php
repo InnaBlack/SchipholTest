@@ -37,4 +37,6 @@ class Airport extends Model
 
 
     protected $table = 'airports';
+
+    public $incrementing = false;
 }
