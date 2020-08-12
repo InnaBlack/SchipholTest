@@ -19,7 +19,11 @@ use App\Http\Controllers\AirlineController;
 |
 */
 
-Route::apiResource('/data_update', 'DataBaseUpdateController');
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});
+
+Route::apiResource('/dataupdate', 'DataBaseUpdateController');
 
 Route::apiResource('/flights', 'FlightController');
 Route::apiResource('/airports', 'AirportController');
