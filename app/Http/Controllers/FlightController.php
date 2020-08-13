@@ -12,6 +12,6 @@ class FlightController extends Controller
      */
     public function index()
     {
-       return Flight::all();
+       return Flight::all('airlineId', 'flightNumber', 'departureAirportId', 'arrivalAirportId');
     }
 }

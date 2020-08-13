@@ -15,7 +15,7 @@ class AirportController extends Controller
      */
     public function index()
     {
-        return Airport::all()->sortBy('distance');
+        return Airport::all('id', 'name', 'distance')->sortBy('distance');
     }
 
     /**
@@ -27,7 +27,7 @@ class AirportController extends Controller
     public function show(string $id = '')
     {
         if (!empty($id)) {
-            return Airport::where('id', $id)->firstOrFail();
+            return Airport::select('id', 'name', 'city', 'countryId', 'latitude', 'longitude')->where('id', $id)->firstOrFail();
         }
     }
 
