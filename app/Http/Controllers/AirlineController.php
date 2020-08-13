@@ -17,7 +17,7 @@ class AirlineController extends Controller
     {
 
         return  Airline::select(
-            'airlines.idf',
+            'airlines.id',
             'airlines.name',
             DB::raw('SUM(airports.distance) as distance'))
             ->join('flights', 'airlines.id', '=', 'flights.airlineId')
