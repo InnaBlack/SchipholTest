@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Http;
-use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client as GuzzleClient;
 use App\Http\Middleware\MapperDBMiddleware;
 use App\Enums\ModelType;
@@ -13,6 +11,9 @@ use Artisan;
 class DataBaseUpdateController extends Controller
 {
 
+    /**
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     public function index()
     {
         /** @var GuzzleClient $client */

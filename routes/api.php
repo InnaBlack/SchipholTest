@@ -28,21 +28,10 @@ Route::apiResource('/dataupdate', 'DataBaseUpdateController');
 Route::apiResource('/flights', 'FlightController');
 Route::apiResource('/airports', 'AirportController');
 
-Route::get('/airports/{id}',  'AirportController@show' , ['id'], function ($id) {
-    return $id;
-});
+Route::get('/airports/{id}',  'AirportController@show');
+
+Route::get('/airports/distanceUnit={distanceUnit}', 'AirportController@distanceUnit');
 
 Route::apiResource('/airlines', 'AirlineController');
 
 
-Route::resource('/flights', 'FlightController')->only([
-    'index',
-]);
-
-Route::resource('/airports', 'AirportController')->only([
-    'index',
-]);
-
-Route::resource('/airlines', 'AirlineController')->only([
-    'index',
-]);

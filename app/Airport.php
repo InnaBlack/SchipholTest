@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $latitude
  * @property int $longitude
  * @property int $distance
+ * @property int $distanceM
  * @property string $name
  * @property string $city
  * @property string $countryId
@@ -32,6 +33,7 @@ class Airport extends Model
             'latitude',
             'longitude',
             'distance',
+            'distanceM',
             'name',
             'city',
             'countryId',

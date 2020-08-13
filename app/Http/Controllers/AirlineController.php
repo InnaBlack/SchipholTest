@@ -23,7 +23,7 @@ class AirlineController extends Controller
             ->join('flights', 'airlines.id', '=', 'flights.airlineId')
             ->join('airports', 'flights.arrivalAirportId', '=', 'airports.id')
             ->groupBy(['airlines.id', 'airlines.name'])
-            ->orderBy('airports.distance')
+            ->orderBy('distance')
             ->get();
 
     }

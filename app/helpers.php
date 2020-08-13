@@ -27,7 +27,8 @@
  *
  * @return float|int
  */
-function distance(float $lat1, float $lon1, float $lat2 = 52.30907, float $lon2 = 52.30907 , $distanceUnit = "K") {
+
+function distance(float $lat1, float $lon1, $distanceUnit = "", float $lat2 = 52.30907, float $lon2 = 52.30907) {
     if (($lat1 == $lat2) && ($lon1 == $lon2)) {
         return 0;
     }
@@ -47,4 +48,8 @@ function distance(float $lat1, float $lon1, float $lat2 = 52.30907, float $lon2 
             return $miles;
         }
     }
+}
+
+function distanceToMiles(float $dist) {
+            return ($dist / 1.609344);
 }
