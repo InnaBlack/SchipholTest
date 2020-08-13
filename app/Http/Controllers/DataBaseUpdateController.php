@@ -11,9 +11,6 @@ use Artisan;
 class DataBaseUpdateController extends Controller
 {
 
-    /**
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     */
     public function index()
     {
         /** @var GuzzleClient $client */
