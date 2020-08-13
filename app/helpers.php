@@ -4,10 +4,30 @@
  * User: inna
  * Date: 2020-08-13
  * Time: 10:00
+ *
+ * @param float  $lat1
+ * @param float  $lon1
+ * @param float  $lat2
+ * @param float  $lon2
+ * @param \sting $distanceUnit
+ *
+ * @return float|int
  */
+//  Schiphol Amsterdam
+// "latitude": 52.30907,
+// "longitude": 4.763385,
 
 
-function distance($lat1, $lon1, $lat2, $lon2, $distanceUnit) {
+/**
+ * @param float  $lat1
+ * @param float  $lon1
+ * @param float  $lat2
+ * @param float  $lon2
+ * @param sting $distanceUnit
+ *
+ * @return float|int
+ */
+function distance(float $lat1, float $lon1, float $lat2 = 52.30907, float $lon2 = 52.30907 , $distanceUnit = "K") {
     if (($lat1 == $lat2) && ($lon1 == $lon2)) {
         return 0;
     }

@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $id
  * @property int $latitude
  * @property int $longitude
+ * @property int $distance
  * @property string $name
  * @property string $city
  * @property string $countryId
@@ -30,6 +31,7 @@ class Airport extends Model
             'id',
             'latitude',
             'longitude',
+            'distance',
             'name',
             'city',
             'countryId',
@@ -37,6 +39,8 @@ class Airport extends Model
 
 
     protected $table = 'airports';
+
+    protected  $primaryKey = 'id';
 
     public $incrementing = false;
 

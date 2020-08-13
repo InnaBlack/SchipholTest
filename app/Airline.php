@@ -31,6 +31,8 @@ class Airline extends Model
             'name',
         ];
 
+    protected $primaryKey = 'id';
+
     protected $table = 'airlines';
 
     public $incrementing = false;

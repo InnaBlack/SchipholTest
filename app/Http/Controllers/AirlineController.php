@@ -12,7 +12,7 @@ class AirlineController extends Controller
      */
     public function index()
     {
-        return Airline::all()->sortBy();
+        return Airline::all();
     }
 
 }

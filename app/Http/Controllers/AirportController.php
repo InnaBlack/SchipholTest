@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Airport;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Support\Facades\App;
+use Response;
 
 class AirportController extends Controller
 {
@@ -12,7 +15,7 @@ class AirportController extends Controller
      */
     public function index()
     {
-        return Airport::all();
+        return Airport::all()->sortBy('distance');
     }
 
     /**
@@ -24,7 +27,9 @@ class AirportController extends Controller
     public function show(string $id = '')
     {
         if (!empty($id)) {
-            return Airport::where('id', $id)->first();
+            return Airport::where('id', $id)->firstOrFail();
         }
     }
+
+
 }

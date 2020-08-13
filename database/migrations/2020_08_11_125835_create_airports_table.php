@@ -17,6 +17,7 @@ class CreateAirportsTable extends Migration
             $table->char('id');
             $table->integer('latitude');
             $table->integer('longitude');
+            $table->integer('distance');
             $table->char('name');
             $table->char('city');
             $table->char('countryId');

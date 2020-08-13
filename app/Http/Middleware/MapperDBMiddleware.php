@@ -51,6 +51,9 @@ class MapperDBMiddleware
                     $model->id = $response['id'];
                     $model->latitude = $response['latitude'];
                     $model->longitude = $response['longitude'];
+                    $model->distance = distance(
+                        $response['latitude'],
+                        $response['longitude']);
                     $model->name = $response['name'];
                     $model->city = $response['city'];
                     $model->countryId = $response['countryId'];

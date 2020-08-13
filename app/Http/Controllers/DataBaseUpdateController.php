@@ -12,11 +12,7 @@ use Artisan;
 
 class DataBaseUpdateController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         /** @var GuzzleClient $client */

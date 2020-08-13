@@ -31,6 +31,8 @@ class Flight extends Model
             'arrivalAirportId',
         ];
 
+    protected $primaryKey = 'flightNumber';
+
     protected $table = 'flights';
 
     public $incrementing = false;
