@@ -36,11 +36,8 @@ class AirportController extends Controller
     public function distanceUnit($distanceUnit = '')
     {
         if (!empty($distanceUnit)) {
-            return Airport::all('id', 'name', 'distance')->sortBy('distance');
+            return Airport::all('id', 'name', strtoupper($distanceUnit) == 'K' ? 'distance' : 'distanceM')->sortBy('distance');
         }
     }
-
-
-
 
 }

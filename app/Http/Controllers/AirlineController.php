@@ -28,4 +28,26 @@ class AirlineController extends Controller
 
     }
 
+    /**
+     * @param string $distanceUnit
+     *
+     * @return \App\Airport[]|\Illuminate\Database\Eloquent\Collection
+     */
+    public function distanceUnit($distanceUnit = '')
+    {
+        if (!empty($distanceUnit)) {
+         return Airline::select(
+                'airlines.id',
+                'airlines.name',
+                DB::raw(strtoupper($distanceUnit) == 'K' ? 'SUM(airports.distance) as distance' : 'SUM(airports.distanceM) as distance'))
+                ->join('flights', 'airlines.id', '=', 'flights.airlineId')
+                ->join('airports', 'flights.arrivalAirportId', '=', 'airports.id')
+                ->groupBy(['airlines.id', 'airlines.name'])
+                ->orderBy('distance')
+                ->get();
+        }
+    }
+
+
+
 }

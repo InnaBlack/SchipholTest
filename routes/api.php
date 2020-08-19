@@ -26,12 +26,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::apiResource('/dataupdate', 'DataBaseUpdateController');
 
 Route::apiResource('/flights', 'FlightController');
+
 Route::apiResource('/airports', 'AirportController');
 
-Route::get('/airports/{id}',  'AirportController@show');
-
-Route::get('/airports/distanceUnit={distanceUnit}', 'AirportController@distanceUnit');
+Route::get('/airports/distanceUnit/{distanceUnit}', 'AirportController@distanceUnit');
 
 Route::apiResource('/airlines', 'AirlineController');
 
-
+Route::get('/airlines/distanceUnit/{distanceUnit}', 'AirlineController@distanceUnit');
